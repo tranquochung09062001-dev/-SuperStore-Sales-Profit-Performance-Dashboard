@@ -118,63 +118,6 @@ The model follows a **star schema**: `fact_Orders` sits at the center, joined to
 
 <img width="700" alt="Data Model" src="https://github.com/tranquochung09062001-dev/-SuperStore-Sales-Profit-Performance-Dashboard/blob/main/Model_View%20(2).png" />
 
-**Star Schema Diagram:**
-
-```mermaid
-erDiagram
-    Dim_Date ||--o{ fact_Orders : "Order Date"
-    dim_People ||--o{ fact_Orders : "Region"
-    dim_Returns ||--o{ fact_Orders : "Order ID"
-
-    fact_Orders {
-        string OrderID
-        date OrderDate
-        date ShipDate
-        string ShipMode
-        string CustomerID
-        string CustomerName
-        string Segment
-        string City
-        string State
-        string Country
-        string PostalCode
-        string Market
-        string Region
-        string ProductID
-        string Category
-        string SubCategory
-        string ProductName
-        decimal Sales
-        int Quantity
-        decimal Profit
-        string SalePerson
-        string Returns
-        decimal Cost
-    }
-
-    Dim_Date {
-        date Date
-        string Month
-        date MonthYear
-        int Year
-        decimal RevenueYoYChange
-    }
-
-    dim_People {
-        string Person
-        string Region
-    }
-
-    dim_Returns {
-        string OrderID
-        string Returned
-    }
-```
-
-*`fact_Orders` is the single fact table at the center (grain: 1 row per order line item); `Dim_Date`, `dim_People`, and `dim_Returns` are dimension tables — a textbook one-fact / multi-dimension star schema, chosen over a snowflake design to keep DAX measures simple and query performance fast.*
-
----
-
 ## 🧠 Design Thinking Process
 
 Before building the dashboard, a **stakeholder requirement analysis** was conducted using the Design Thinking framework to avoid designing based on assumptions.
