@@ -226,7 +226,7 @@ Structured the report into 4 focused pages (Overview → Market → Product → 
 
 ### 1️⃣ Business Overview
 
-![Business Overview](https://github.com/tranquochung09062001-dev/-SuperStore-Sales-Profit-Performance-Dashboard/blob/main/images/business_overview.png)
+![Business Overview](https://github.com/tranquochung09062001-dev/-SuperStore-Sales-Profit-Performance-Dashboard/blob/main/OverView.jpg)
 
 📌 **Analysis 1:**
 - **Observation:** Total Profit reached **$1.42M** on **22,573 orders**, with an overall Profit Margin of **12%**. **APAC** is the top-performing market. The monthly Sales & Profit trend (2011–2014) shows a clear seasonal pattern: **Month 1 (January) and Month 7 (July) consistently dip** across all 4 years, while **Month 8 and Month 9 show the strongest growth**, coinciding with a steady overall upward trend toward year-end.
