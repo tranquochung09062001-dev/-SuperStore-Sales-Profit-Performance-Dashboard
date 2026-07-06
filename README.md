@@ -242,7 +242,7 @@ Structured the report into 4 focused pages (Overview → Market → Product → 
 
 ### 3️⃣ Product Details
 
-![Product Details](https://github.com/tranquochung09062001-dev/-SuperStore-Sales-Profit-Performance-Dashboard/blob/main/images/product_details.png)
+![Product Details](https://github.com/tranquochung09062001-dev/-SuperStore-Sales-Profit-Performance-Dashboard/blob/main/SalesAnalysis.jpg)
 
 📌 **Analysis 3:**
 - **Observation:** **Technology** is the leading profit-generating category (33% share in the latest year), while **Office Supplies and Furniture** show more volatile year-over-year contribution. Several **Furniture sub-categories (e.g. Tables, Bookcases)** appear among the "Top 10 Lost Profit Products" — a known risk pattern in this dataset where certain furniture items are sold at a loss. Return rate by product shows specific SKUs (e.g. Advantus Rubber Bands, Samsung Smart Phone) with return rates as high as **48.5%**.
@@ -250,7 +250,7 @@ Structured the report into 4 focused pages (Overview → Market → Product → 
 
 ### 4️⃣ Sales Analysis
 
-![Sales Analysis](https://github.com/tranquochung09062001-dev/-SuperStore-Sales-Profit-Performance-Dashboard/blob/main/images/sales_analysis.png)
+![Sales Analysis](https://github.com/tranquochung09062001-dev/-SuperStore-Sales-Profit-Performance-Dashboard/blob/main/ProductDetails.jpg)
 
 📌 **Analysis 4:**
 - **Observation:** Profit margin by market ranges from **10% (LATAM)** to **27% (Canada)**, with status indicators flagging LATAM as underperforming. Sales performance is concentrated among a small group of top sellers (e.g. Anna Andreadi, Chuck Magee), while **Profit YoY Growth by SalePerson** shows most representatives achieving single-digit percentage growth, with a wide gap between the top and bottom performers.
