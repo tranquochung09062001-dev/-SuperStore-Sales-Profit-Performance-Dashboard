@@ -187,7 +187,7 @@ Identified the primary stakeholder (**Head of Region**), a Senior Manager who do
 
 **2️⃣ Define**
 
-![Step 2 - Define](https://github.com/tranquochung09062001-dev/-SuperStore-Sales-Profit-Performance-Dashboard/blob/main/images/design_thinking_step2.png)
+![Step 2 - Empathize](https://github.com/tranquochung09062001-dev/-SuperStore-Sales-Profit-Performance-Dashboard/blob/main/step2_design_thinking.png)
 
 Problem statement: *"Senior Manager needs a comprehensive, visual, and comparable dashboard to quickly assess which markets and products drive sustainable growth — enabling confident decisions on resource allocation and business expansion strategy."*
 
