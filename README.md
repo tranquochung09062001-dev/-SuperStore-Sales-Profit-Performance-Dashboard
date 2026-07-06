@@ -181,7 +181,7 @@ Before building the dashboard, a **stakeholder requirement analysis** was conduc
 
 **1️⃣ Empathize**
 
-![Step 1 - Empathize](https://github.com/tranquochung09062001-dev/-SuperStore-Sales-Profit-Performance-Dashboard/blob/main/images/design_thinking_step1.png)
+![Step 1 - Empathize](https://github.com/tranquochung09062001-dev/-SuperStore-Sales-Profit-Performance-Dashboard/blob/main/step1_design_thinking.png)
 
 Identified the primary stakeholder (**Head of Region**), a Senior Manager who does not interact directly with raw data, has limited time, and makes decisions based on comparison and trade-offs between markets.
 
