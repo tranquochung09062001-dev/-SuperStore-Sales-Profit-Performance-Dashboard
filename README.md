@@ -116,7 +116,7 @@ The model follows a **star schema**: `fact_Orders` sits at the center, joined to
 - `dim_People` (1 → \*) via `Region` → enables analysis by salesperson/region
 - `dim_Returns` (1 → \*) via `Order ID` → enables return-rate analysis per order
 
-<img width="700" alt="Data Model" src="https://github.com/tranquochung09062001-dev/-SuperStore-Sales-Profit-Performance-Dashboard/blob/main/images/data_model.png" />
+<img width="700" alt="Data Model" src="https://github.com/tranquochung09062001-dev/-SuperStore-Sales-Profit-Performance-Dashboard/blob/main/Model_view.png" />
 
 **Star Schema Diagram:**
 
