@@ -1,190 +1,284 @@
-# UNIGAP - PORTFOLIO BUILDING MODULE -  PBI TEMPLATE
+![SuperStore Sales & Profit Performance Dashboard](https://github.com/tranquochung09062001-dev/-SuperStore-Sales-Profit-Performance-Dashboard/blob/main/SuperStore_Dashboard_Cover.png)
 
-🔥Use this template as an outline for your Github projects. Make a copy of this readme file and tailor it your own. Happy portfolio-ing and start applying aggressively :"))
+# 📊 SuperStore Sales & Profit Performance Dashboard | Sales & Profitability Analysis + Retail | SQL & Power BI
 
----
-![E-commerce Website_Analysis](https://github.com/Dorothy-Ho-Vy/Sample-Readme-template/blob/0e47d32968459ec80d7d2666fbf5044ac56894e6/1.png)
+_Analyze Sales & Profit Performance across global markets to identify growth opportunities and profitability risks – SuperStore, a Global Retail Company | SQL & Power BI_
 
-Change Icon emoji 🔥🔍📘🚩 to your likings by clicking "Start" + "."
+**+ Business question:** Which markets, products, and sales representatives are truly driving profitable growth for SuperStore — and where is the business losing margin through returns, seasonal dips, or underperforming segments?
 
-
-# 📊 Your Project Name [ Business question + Domain + Tools ]  
-
- _Example:_
- _Analyze & Discover the User Churnsinsight of Databel – a Telecomproviders| SQL & PowerBI_
- 
-_+ Business question: The core problems/ the core questions that this project solves/ answers -> User Churn Analysis_
-
-_+ Domain: Domain/ Industry that this projects focus on --> a Telecomproviders_
-
-**_📌You need to show that your projects are applicable to real business use cases, for a particular industry, not just "learning projects"_**
+**+ Domain:** Retail / E-commerce (Global Retail — Furniture, Office Supplies, Technology)
 
 ---
 
-## 📑 Table of Contents  
-1. [📌 Background & Overview](#-background--overview)  
-2. [📂 Dataset Description & Data Structure](#-dataset-description--data-structure)  
-3. [🧠 Design Thinking Process](#-design-thinking-process)  
-4. [📊 Key Insights & Visualizations](#-key-insights--visualizations)  
-5. [🔎 Final Conclusion & Recommendations](#-final-conclusion--recommendations)
+## 📑 Table of Contents
+1. [📌 Background & Overview](#-background--overview)
+2. [📂 Dataset Description & Data Structure](#-dataset-description--data-structure)
+3. [🧠 Design Thinking Process](#-design-thinking-process)
+4. [⚒️ Main Process](#️-main-process)
+5. [📊 Key Insights & Visualizations](#-key-insights--visualizations)
+6. [🛠️ Skills & Tools Applied](#️-skills--tools-applied)
+7. [🔎 Final Conclusion & Recommendations](#-final-conclusion--recommendations)
 
 ---
 
-## 📌 Background & Overview  
+## 📌 Background & Overview
 
-### Objective:
-### 📖 What is this project about? 
- 
-- Provide a brief introduction to the project. Define the problem statement/ business question that this project will show and why it is important.
-- Write in bullet point format
+### 📖 What is this project about?
 
- _Example:_
+This project analyzes **sales and profit performance of a global retail business (SuperStore)** using **SQL** for data preparation and **Power BI** for interactive visualization across 4 dashboard views. The objective is to:
 
- This project analyzes sales trends and inventory control using SQL and Power BI. The objective is
-✔️ Identify high-demand products and sales trends.  
-✔️ Optimize inventory levels to prevent overstocking or stockouts.  
-✔️ Provide actionable insights through Power BI dashboards.  
+✔️ Track overall business health — total profit, orders, revenue, and growth trends.
+✔️ Compare performance across markets to identify top performers and risk areas (high returns, low margin).
+✔️ Surface top/bottom performing products and categories.
+✔️ Evaluate sales team performance and profit margin by market.
+✔️ Uncover seasonal patterns in profit and sales across 2011–2014 to support proactive budget and inventory planning.
+✔️ Deliver insights through an interactive, filterable Power BI dashboard (by Year, Month, Market, SalePerson) for fast decision-making.
 
+The dashboard is structured into **4 views** — Business Overview, Market Analysis, Product Details, and Sales Analysis — allowing stakeholders to move from a high-level summary to granular, actionable detail.
 
-**_📌You need to provide the context in a clearcut way_**
+### 👤 Who is this project for?
 
-**_📌Keep your language in this part simple and relatable. Ditch the jargon and speak in terms your audience uses every day. Focus on the practical applications and business value. Show them how the insights can directly impact decision-making and drive success_**
-
-### 👤 Who is this project for?  
-
-Mention who might benefit from this project 
-
- _Example:_
-
-✔️ Data analysts & business analysts  
-✔️ Supply chain managers & inventory controllers  
-✔️ Decision-makers & stakeholders  
+✔️ Data analysts & business analysts
+✔️ Sales & regional managers
+✔️ Category / product managers
+✔️ Decision-makers & executives evaluating market expansion and budget allocation
 
 ---
 
-## 📂 Dataset Description & Data Structure  
+## 📂 Dataset Description & Data Structure
 
-### 📌 Data Source  
-- Source: (Mention where the dataset is obtained from—Kaggle, company database, government sources, etc.)  
-- Size: (Mention the number of rows & columns)  
-- Format: (.csv, .sql, .xlsx, etc.)  
+### 📌 Data Source
+- **Source:** Sample Superstore dataset (widely used public retail transactions dataset, commonly sourced from Kaggle / Tableau sample data)
+- **Time range:** 2011 – 2014
+- **Format:** `.csv` / `.xlsx`, modeled into a star schema in Power BI
 
-### 📊 Data Structure & Relationships  
+### 📊 Data Structure & Relationships
 
-#### 1️⃣ Table Schema & Data Snapshot 
-Mention how many tables are in the dataset.  Only mention tables that you actually used from the entire dataset. 
-Table 1: Products Table  
+#### 1️⃣ Table Schema
 
-👉🏻 Insert a screenshot of table schema. if table is too long, only show a snapshot of it. Recommend to put it in a toggle format
+**Table 1: `fact_Orders`** (Fact table — one row per order line item)
 
- _Example:_
+| Column Name | Data Type | Description |
+|---|---|---|
+| Order ID | TEXT | Unique identifier for each order |
+| Order Date | DATE | Date the order was placed |
+| Ship Date | DATE | Date the order was shipped |
+| Ship Mode | TEXT | Shipping method (e.g. Standard Class) |
+| Customer ID | TEXT | Unique customer identifier |
+| Customer Name | TEXT | Customer name |
+| Segment | TEXT | Customer segment (Consumer, Corporate, Home Office) |
+| City | TEXT | City of the order |
+| State | TEXT | State / province of the order |
+| Country | TEXT | Country of the order |
+| Postal Code | TEXT | Postal code of the delivery address |
+| Market | TEXT | Sales market (APAC, EU, US, LATAM, Africa, Canada) |
+| Region | TEXT | Sub-region within the market (e.g. Central, North) |
+| Product ID | TEXT | Unique product identifier |
+| Category | TEXT | Product category (Furniture, Office Supplies, Technology) |
+| Sub-Category | TEXT | Product sub-category (e.g. Appliances, Tables) |
+| Product Name | TEXT | Product name |
+| Sales | DECIMAL | Revenue generated by the order line |
+| Quantity | INT | Number of units sold |
+| Profit | DECIMAL | Profit generated by the order line |
+| SalePerson | TEXT | Salesperson assigned to the order |
+| Returns | TEXT/BOOLEAN | Whether the order line was returned |
+| Cost | DECIMAL | Cost associated with the order line |
 
-| Column Name | Data Type | Description |  
-|-------------|----------|-------------|  
-| Product_ID  | INT      | Unique identifier for each product |  
-| Name        | TEXT     | Product name |  
-| Category    | TEXT     | Product category |  
-| Price       | FLOAT    | Price per unit |  
+**Table 2: `Dim_Date`** (Date dimension)
 
+| Column Name | Data Type | Description |
+|---|---|---|
+| Date | DATE | Calendar date |
+| Month | TEXT | Month name |
+| MonthYear | DATE | Month-Year key used for time-series sorting |
+| Year | INT | Calendar year |
+| RevenueYoYChange | CALCULATED | Year-over-year revenue change % |
 
-Table 2: Sales Transactions  
+**Table 3: `dim_People`** (Sales rep dimension)
 
-👉🏻 Insert a screenshot of table schema. if table is too long, only show a snapshot of it. Recommend to put it in a toggle format
+| Column Name | Data Type | Description |
+|---|---|---|
+| Person | TEXT | Salesperson name |
+| Region | TEXT | Region the salesperson is responsible for |
 
+**Table 4: `dim_Returns`** (Returns dimension)
 
- _Example:_
+| Column Name | Data Type | Description |
+|---|---|---|
+| Order ID | TEXT | Order identifier (links to `fact_Orders`) |
+| Returned | TEXT/BOOLEAN | Flag indicating whether the order was returned |
 
-| Column Name    | Data Type | Description |  
-|---------------|----------|-------------|  
-| Transaction_ID | INT      | Unique identifier for each sale |  
-| Product_ID     | INT      | Foreign key linking to Products table |  
-| Quantity       | INT      | Number of items sold |  
-| Sale_Date      | DATE     | Date of transaction |  
+#### 2️⃣ Data Relationships
 
+The model follows a **star schema**: `fact_Orders` sits at the center, joined to three dimension tables —
 
-**_📌If the table is too big, only capture a part of it that contains key metrics you used in the projects or put the table in toggle_**
+- `Dim_Date` (1 → \*) via `Order Date` → enables time-based analysis (Month, Year, YoY change)
+- `dim_People` (1 → \*) via `Region` → enables analysis by salesperson/region
+- `dim_Returns` (1 → \*) via `Order ID` → enables return-rate analysis per order
 
-<details>
-<summary>Click to toggle</summary>
+<img width="700" alt="Data Model" src="https://github.com/tranquochung09062001-dev/-SuperStore-Sales-Profit-Performance-Dashboard/blob/main/images/data_model.png" />
 
-This content is hidden by default and will expand/collapse when clicked.
+**Star Schema Diagram:**
 
-You can add more details here, like code blocks, lists, or images.
-</details>
+```mermaid
+erDiagram
+    Dim_Date ||--o{ fact_Orders : "Order Date"
+    dim_People ||--o{ fact_Orders : "Region"
+    dim_Returns ||--o{ fact_Orders : "Order ID"
 
-#### 🥰3️⃣ Data Relationships:  
-👉🏻 Include a screenshot of Data Modeling to visualize relationships.  
+    fact_Orders {
+        string OrderID
+        date OrderDate
+        date ShipDate
+        string ShipMode
+        string CustomerID
+        string CustomerName
+        string Segment
+        string City
+        string State
+        string Country
+        string PostalCode
+        string Market
+        string Region
+        string ProductID
+        string Category
+        string SubCategory
+        string ProductName
+        decimal Sales
+        int Quantity
+        decimal Profit
+        string SalePerson
+        string Returns
+        decimal Cost
+    }
+
+    Dim_Date {
+        date Date
+        string Month
+        date MonthYear
+        int Year
+        decimal RevenueYoYChange
+    }
+
+    dim_People {
+        string Person
+        string Region
+    }
+
+    dim_Returns {
+        string OrderID
+        string Returned
+    }
+```
+
+*`fact_Orders` is the single fact table at the center (grain: 1 row per order line item); `Dim_Date`, `dim_People`, and `dim_Returns` are dimension tables — a textbook one-fact / multi-dimension star schema, chosen over a snowflake design to keep DAX measures simple and query performance fast.*
 
 ---
 
-## 🧠 Design Thinking Process  
+## 🧠 Design Thinking Process
 
-Explain the step-by-step approach taken to solve the problem.  
+Before building the dashboard, a **stakeholder requirement analysis** was conducted using the Design Thinking framework to avoid designing based on assumptions.
 
-👉🏻 Insert a screenshot of the Design Thinking steps (Screenshot your Excel design thinking tables for better presentation).  
+**1️⃣ Empathize**
 
-1️⃣ Empathize  
-2️⃣ Define point of view  
-3️⃣ Ideate  
-4️⃣ Prototype and review  
+![Step 1 - Empathize](https://github.com/tranquochung09062001-dev/-SuperStore-Sales-Profit-Performance-Dashboard/blob/main/images/design_thinking_step1.png)
 
-**_📌Use Canva/ Powerpoint to change the format of your Design thinking table, making it more visually pleasant_**
+Identified the primary stakeholder (**Head of Region**), a Senior Manager who does not interact directly with raw data, has limited time, and makes decisions based on comparison and trade-offs between markets.
+
+**2️⃣ Define**
+
+![Step 2 - Define](https://github.com/tranquochung09062001-dev/-SuperStore-Sales-Profit-Performance-Dashboard/blob/main/images/design_thinking_step2.png)
+
+Problem statement: *"Senior Manager needs a comprehensive, visual, and comparable dashboard to quickly assess which markets and products drive sustainable growth — enabling confident decisions on resource allocation and business expansion strategy."*
+
+**3️⃣ Ideate**
+
+![Step 3 - Ideate](https://github.com/tranquochung09062001-dev/-SuperStore-Sales-Profit-Performance-Dashboard/blob/main/images/design_thinking_step3.png)
+
+Mapped out the required decision points: identify growth engines, assess market investability, evaluate growth quality (margin & risk), select strategic products, stress-test scenarios, and translate decisions into concrete next steps.
+
+**4️⃣ Prototype & Review**
+
+![Step 4 - Prototype and Review](https://github.com/tranquochung09062001-dev/-SuperStore-Sales-Profit-Performance-Dashboard/blob/main/images/design_thinking_step4.png)
+
+Structured the report into 4 focused pages (Overview → Market → Product → Sales Rep) so the dashboard is understandable within 30 seconds even as a static screenshot, matching the stakeholder's usage pattern (opened only during board/strategy meetings, not daily).
+
 ---
 
 ## ⚒️ Main Process
 
-**_📌If your project involves SQL as 1st part of data preprocessing, do this part, or else you can skip this part and jump directly into the Visualization part_**
+1️⃣ **Data Cleaning & Preprocessing**
+- Standardized Market/Country naming, validated Category and Sub-Category labels
+- Verified no duplicate Order IDs and handled blank/incomplete fields
 
-1️⃣ Data Cleaning & Preprocessing 
-2️⃣ Exploratory Data Analysis (EDA)  
-3️⃣ SQL/ Python Analysis 
+2️⃣ **Exploratory Data Analysis (EDA)**
+- Checked distribution of Sales, Profit, and Return values across Market and Category
+- Identified outliers in Profit (loss-making sub-categories) for further investigation
 
-- In each step, show your Code
-
-- Include query/ code execution screenshots or result samples
-
-- Explain its purpose and its findings
-
-
-4️⃣ Power BI Visualization  (applicable for PBI Projects)
+3️⃣ **Power BI Visualization**
+- Built relationships (star schema) in Power BI Data Model
+- Created DAX measures for YoY Growth, Profit Margin, Return Rate, and Top-N rankings
+- Designed 4 report pages with cross-filtering slicers (Year, Month, Market, SalePerson)
 
 ---
 
-## 📊 Key Insights & Visualizations  
+## 📊 Key Insights & Visualizations
 
-### 🔍 Dashboard Preview  
+### 1️⃣ Business Overview
 
-#### 1️⃣ Dashboard 1 Preview  
-👉🏻 Insert Power BI dashboard screenshots here  
+![Business Overview](https://github.com/tranquochung09062001-dev/-SuperStore-Sales-Profit-Performance-Dashboard/blob/main/images/business_overview.png)
 
-📌 Analysis 1:  
-- Observation: _Describe trends, key metrics, and patterns. Any insights from those observation_  
-- Recommendation: _Suggest actions based on insights._  
+📌 **Analysis 1:**
+- **Observation:** Total Profit reached **$1.42M** on **22,573 orders**, with an overall Profit Margin of **12%**. **APAC** is the top-performing market. The monthly Sales & Profit trend (2011–2014) shows a clear seasonal pattern: **Month 1 (January) and Month 7 (July) consistently dip** across all 4 years, while **Month 8 and Month 9 show the strongest growth**, coinciding with a steady overall upward trend toward year-end.
+- **Recommendation:** Plan marketing and inventory activities around the recurring Jan/Jul low points (e.g. promotions to offset the post-holiday and mid-year slump) and reinforce supply capacity ahead of the Aug–Dec growth window.
 
-#### 2️⃣ Dashboard 2 Preview  
-👉🏻 Insert Power BI dashboard screenshots here
+### 2️⃣ Market Analysis
 
-📌 Analysis 2:   
-- Observation: _Describe trends, key metrics, and patterns. Any insights from those observation_  
-- Recommendation: _Suggest actions based on insights._  
+![Market Analysis](https://github.com/tranquochung09062001-dev/-SuperStore-Sales-Profit-Performance-Dashboard/blob/main/images/market_analysis.png)
 
-#### 3️⃣ Dashboard 3 Preview  
-👉🏻 Insert Power BI dashboard screenshots here  
+📌 **Analysis 2:**
+- **Observation:** **Canada has the highest Profit Margin (27%)** despite having the **lowest total revenue** among all markets — indicating strong per-order profitability but limited scale. **APAC generates the highest absolute profit ($436K)**. **LATAM has the highest Return Rate (12.6%)**, notably higher than EU's 6.5%, suggesting quality, fulfillment, or product-fit issues specific to that market.
+- **Recommendation:** Treat Canada as a high-efficiency market worth scaling (more marketing investment could convert its high margin into higher absolute profit). Investigate root causes of LATAM's elevated return rate before increasing marketing spend there.
 
-📌 Analysis 3:  
-- Observation: _Describe trends, key metrics, and patterns. Any insights from those observation_  
-- Recommendation: _Suggest actions based on insights._  
+### 3️⃣ Product Details
+
+![Product Details](https://github.com/tranquochung09062001-dev/-SuperStore-Sales-Profit-Performance-Dashboard/blob/main/images/product_details.png)
+
+📌 **Analysis 3:**
+- **Observation:** **Technology** is the leading profit-generating category (33% share in the latest year), while **Office Supplies and Furniture** show more volatile year-over-year contribution. Several **Furniture sub-categories (e.g. Tables, Bookcases)** appear among the "Top 10 Lost Profit Products" — a known risk pattern in this dataset where certain furniture items are sold at a loss. Return rate by product shows specific SKUs (e.g. Advantus Rubber Bands, Samsung Smart Phone) with return rates as high as **48.5%**.
+- **Recommendation:** Review pricing/discount policy for the identified loss-making Furniture products, and conduct a quality/description audit for the small set of SKUs driving disproportionately high return rates.
+
+### 4️⃣ Sales Analysis
+
+![Sales Analysis](https://github.com/tranquochung09062001-dev/-SuperStore-Sales-Profit-Performance-Dashboard/blob/main/images/sales_analysis.png)
+
+📌 **Analysis 4:**
+- **Observation:** Profit margin by market ranges from **10% (LATAM)** to **27% (Canada)**, with status indicators flagging LATAM as underperforming. Sales performance is concentrated among a small group of top sellers (e.g. Anna Andreadi, Chuck Magee), while **Profit YoY Growth by SalePerson** shows most representatives achieving single-digit percentage growth, with a wide gap between the top and bottom performers.
+- **Recommendation:** Use top-performer selling patterns (product mix, market focus) as a coaching benchmark for underperforming sales reps, and set market-specific margin targets rather than a single company-wide target given the wide margin range across markets.
 
 ---
 
-## 🔎 Final Conclusion & Recommendations  
+## 🛠️ Skills & Tools Applied
 
-👉🏻 Based on the insights and findings above, we would recommend the [stakeholder team] to consider the following:  
+| Category | Skills / Tools |
+|---|---|
+| **Data Modeling** | Star schema design (1 fact table + 3 dimension tables), relationship configuration (1-to-many), data granularity design |
+| **Data Preparation** | SQL (data extraction, cleaning, validation), Power Query (transformation, standardizing category/market labels) |
+| **DAX (Power BI)** | Time-intelligence measures (YoY Growth using `DATEADD`/`CALCULATE`), Profit Margin %, Return Rate %, Top-N ranking (`RANKX`, `TOPN`), conditional formatting logic |
+| **Data Visualization** | Power BI report design across 4 pages, chart selection (KPI cards, combo charts, donut, stacked bar, matrix with conditional formatting), cross-filtering slicers |
+| **Business Analysis** | Stakeholder requirement gathering using the 5W1H framework, translating business questions into measurable KPIs |
+| **Analytical Thinking** | Root-cause investigation (e.g. linking return rate spikes to specific markets/products), seasonality pattern detection across multi-year data |
+| **Data Storytelling** | Structuring findings into Observation → Recommendation format for each dashboard page, executive-level insight summarization |
 
-📌 Key Takeaways:  
-✔️ Recommendation 1  
-✔️ Recommendation 2  
-✔️ Recommendation 3
+---
 
-**_📌Remember to summarize the most core insights/ observations you extract from the entire projects. 
- Recap ONLY key actions/ recommendations. DO NOT copy paste everything above_**
+
+
+## 🔎 Final Conclusion & Recommendations
+
+Based on the insights above, we recommend the **Sales & Regional Management team** consider the following:
+
+📌 **Key Takeaways:**
+✔️ **Double down on high-efficiency, low-scale markets** like Canada (27% margin) by increasing marketing investment, while addressing the **high return rate in LATAM (12.6%)** before scaling spend there.
+✔️ **Plan around recurring seasonality** — build promotional campaigns to smooth out the consistent Jan/Jul profit dips, and ensure inventory readiness ahead of the Aug–Dec growth period.
+✔️ **Fix the identified loss-making Furniture sub-categories** and audit the small number of SKUs with abnormally high return rates (>25%), since these disproportionately erode overall profit margin.
