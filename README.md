@@ -193,13 +193,13 @@ Problem statement: *"Senior Manager needs a comprehensive, visual, and comparabl
 
 **3️⃣ Ideate**
 
-![Step 3 - Ideate](https://github.com/tranquochung09062001-dev/-SuperStore-Sales-Profit-Performance-Dashboard/blob/main/images/design_thinking_step3.png)
+![Step 3 - Ideate](https://github.com/tranquochung09062001-dev/-SuperStore-Sales-Profit-Performance-Dashboard/blob/main/design_thinking_step3.png)
 
 Mapped out the required decision points: identify growth engines, assess market investability, evaluate growth quality (margin & risk), select strategic products, stress-test scenarios, and translate decisions into concrete next steps.
 
 **4️⃣ Prototype & Review**
 
-![Step 4 - Prototype and Review](https://github.com/tranquochung09062001-dev/-SuperStore-Sales-Profit-Performance-Dashboard/blob/main/images/design_thinking_step4.png)
+![Step 4 - Prototype and Review](https://github.com/tranquochung09062001-dev/-SuperStore-Sales-Profit-Performance-Dashboard/blob/main/design_thinking_step4.png)
 
 Structured the report into 4 focused pages (Overview → Market → Product → Sales Rep) so the dashboard is understandable within 30 seconds even as a static screenshot, matching the stakeholder's usage pattern (opened only during board/strategy meetings, not daily).
 
