@@ -27,20 +27,29 @@ _Analyze Sales & Profit Performance across global markets to identify growth opp
 
 This project analyzes **sales and profit performance of a global retail business (SuperStore)** using **SQL** for data preparation and **Power BI** for interactive visualization across 4 dashboard views. The objective is to:
 
-✔️ Track overall business health — total profit, orders, revenue, and growth trends.
+✔️ Track overall business health — total profit, orders, revenue, and growth trends. 
+
 ✔️ Compare performance across markets to identify top performers and risk areas (high returns, low margin).
+
 ✔️ Surface top/bottom performing products and categories.
+
 ✔️ Evaluate sales team performance and profit margin by market.
+
 ✔️ Uncover seasonal patterns in profit and sales across 2011–2014 to support proactive budget and inventory planning.
+
 ✔️ Deliver insights through an interactive, filterable Power BI dashboard (by Year, Month, Market, SalePerson) for fast decision-making.
+
 
 The dashboard is structured into **4 views** — Business Overview, Market Analysis, Product Details, and Sales Analysis — allowing stakeholders to move from a high-level summary to granular, actionable detail.
 
 ### 👤 Who is this project for?
 
 ✔️ Data analysts & business analysts
+
 ✔️ Sales & regional managers
+
 ✔️ Category / product managers
+
 ✔️ Decision-makers & executives evaluating market expansion and budget allocation
 
 ---
